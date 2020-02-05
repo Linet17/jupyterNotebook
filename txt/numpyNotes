@@ -1,0 +1,31 @@
+Comprehension python - large if statements
+Rienforcement Learning - TensorFlow
+Deep Leraning - TensorFlow
+
+Day1:Numpy - predefined methods in maths and stats
+
+For Exploratory Data Analysis,knowledge required:
+- measures of central tendencies
+-standard deviation/variance
+
+Finding outliers in a dataset:
+- develop a box plot
+-large if statements
+-get max and min
+
+
+Day2:Pandas
+Built on top of numpy,creating dataframes
+
+Day3:Seaborn/matplotlib
+
+Day4:Scikit-Learn
+-supervised
+-unsupervised
+
+
+
+Jupyter Notebook
+markdowns
+
+lazyloading....

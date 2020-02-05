@@ -1,0 +1,95 @@
+Pandas
+-Creates dataframes(a series of columns )
+-dataframes in pandas is called series
+
+-.json data used mostly in apis 80% of todays apis
+-once a .json file is decoded,it comes out  as a dictionary in python
+
+
+How to read huge CSV files with python:
+1. Create Engine
+- create a connector to a database
+
+2. Construct the loop for reading using chunksize
+- building the db  (load the csv file) by chunksize
+
+3. Make SQL query to build Pandas Dataframe
+-cinstruct the Pandas Dataframe for research purpose from the db by calling SQL query
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+import pandas as pd
+
+data = []
+
+with open(<your file>, "rb") as myfile:
+    # read the header seperately
+    # decode it as 'utf-8', remove any special characters, and split it on the comma (or deliminator)
+    header = myfile.readline().decode('utf-8').replace('\r\n', '').split(',')
+    # read the rest of the data
+    for line in myfile:
+        row = line.decode('utf-8', errors='ignore').replace('\r\n', '').split(',')
+        data.append(row)
+
+# save the data as a dataframe
+df = pd.DataFrame(data=data, columns = header)
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+python datasructures vs python datatypes
+
+comprehensions in python:
+-writing an iteration in one line as opposed to 5/several lines
+for eg - 
+structured programming -
+
+result = []
+y = range(10,50)
+for x in y:
+	if x%2 != 0 ;
+	result.append(x)
+result
+
+funtional programming-
+comrehension question- loop and operation
+variable = [operation loop condition]
+result = [ifx%2!=0 for x in range (10,500]
+
+
+Sampling:
+Two types of sampling
+-clustered
+-random
+
+nan - not a number
+
+
+Applying Functions
+Correlation - a reationship between 2 continuous pieces of data(create a contingency table)
+rating of correlations
+0-40% = poor
+40-60% = medium
+60 and above = high
+
+One Plot
+
+
+Types of variables/data
+Continuous - Real number line
+a.cordinal
+Categorical - Certain categories
+
+
+effectivity
+least - regular loop
+medium - comprehensions
+highest - apply
+
+https://towardsdatascience.com/how-to-easily-deploy-machine-learning-models-using-flask-b95af8fe34d4
+https://scikit-learn.org/stable/supervised_learning.html#supervised-learning
+https://towardsdatascience.com/train-test-split-and-cross-validation-in-python-80b61beca4b6
+https://www.learndatasci.com/tutorials/python-pandas-tutorial-complete-introduction-for-beginners/
+https://www.alphavantage.co/documentation/
+https://jsonplaceholder.typicode.com/
+https://datasets.imdbws.com/
+
